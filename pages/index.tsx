@@ -41,7 +41,7 @@ export default function Home() {
       </header>
       <main className="w-full max-w-screen-lg column">
         <section className="relative w-full h-[80vh] flex items-center justify-center bg-gray-900 overflow-hidden">
-          {/* <img
+          {/* <Image
             alt="Hero Background"
             className="absolute inset-0 w-full h-full object-cover opacity-50"
             src="/placeholder.svg"
@@ -74,7 +74,7 @@ export default function Home() {
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
                 <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  I'm a passionate web developer with a strong background in building modern, responsive, and user-friendly
+                  I&aposm a passionate web developer with a strong background in building modern, responsive, and user-friendly
                   web applications. With a keen eye for design and a deep understanding of the latest web technologies, I
                   strive to create elegant and efficient solutions that deliver exceptional user experiences.
                 </p>
@@ -86,14 +86,14 @@ export default function Home() {
           <div className="space-y-4 mb-8">
             <h2 className="text-3xl font-bold">Projects</h2>
             <p className="text-gray-500 dark:text-gray-400">
-              I've worked on a variety of web projects, from a movie-management platform to custom websites. Here
+              I&aposve worked on a variety of web projects, from a movie-management platform to custom websites. Here
               are some of my best projects.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
               <Link className="block" href="#">
-                <img
+                <Image
                   alt="Project 1"
                   className="w-full h-48 object-cover"
                   height="200"
@@ -132,7 +132,7 @@ export default function Home() {
             </div>
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
               <Link className="block" href="#">
-                <img
+                <Image
                   alt="Project 2"
                   className="w-full h-48 object-cover"
                   height="200"
@@ -171,7 +171,7 @@ export default function Home() {
             </div>
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
               <Link className="block" href="#">
-                <img
+                <Image
                   alt="Project 3"
                   className="w-full h-48 object-cover"
                   height="200"
@@ -210,7 +210,7 @@ export default function Home() {
             </div>
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
               <Link className="block" href="#">
-                <img
+                <Image
                   alt="Project 4"
                   className="w-full h-48 object-cover"
                   height="200"
@@ -364,7 +364,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Contact Me</h2>
                 <p className="max-w-screen-lg text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  I'm always excited to connect with new people and build potential projects. Feel free to reach out
+                  I&aposm always excited to connect with new people and build potential projects. Feel free to reach out
                   using the form below.
                 </p>
               </div>
