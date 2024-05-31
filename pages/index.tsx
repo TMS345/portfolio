@@ -155,7 +155,7 @@ export default function Home() {
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2">
                   <Link className="hover:text-primary-500 transition-colors" href="#">
-                    Dominion Chapel's Website
+                    Dominion Chapel&apos;s Website
                   </Link>
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 mb-4">A simple and functional website built with HTML5, Bootstrap and PHP.</p>
