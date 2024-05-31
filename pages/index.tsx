@@ -40,45 +40,53 @@ export default function Home() {
         </div>
       </header>
       <main className="w-full max-w-screen-lg column">
-        <section className="relative w-full h-[80vh] flex items-center justify-center bg-gray-900 overflow-hidden">
-          {/* <Image
-            alt="Hero Background"
-            className="absolute inset-0 w-full h-full object-cover opacity-50"
-            src="/placeholder.svg"
-          /> */}
-          <div className="relative z-10 text-center space-y-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Gershom Gbadebo</h1>
-            <p className="text-xl text-gray-300">Full-Stack Web Developer</p>
-            <p className="text-lg text-gray-400 max-w-3xl">
-              Crafting beautiful and functional websites that bring your ideas to life.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <Link
-                className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                href="#projects"
-              >
-                View Work
-              </Link>
-              <Link
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-transparent px-4 py-2 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                href="#contact"
-              >
-                Contact Me
-              </Link>
+        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-[#4b6cb7] to-[#182848]">
+          <div className="container px-4 md:px-6 flex flex-col items-center justify-center gap-8">
+            <div className="space-y-4 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Gershom Gbadebo</h1>
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-200">Web Developer</h2>
+              <p className="max-w-md text-gray-300">
+                Crafting beautiful and functional websites that bridge you closer to your goals.
+              </p>
+              <div className="flex justify-center gap-4">
+                <Link
+                  href="#projects"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-[#f7b731] px-6 text-sm font-medium text-gray-900 shadow transition-colors hover:bg-[#f4a524] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  View Portfolio
+                </Link>
+                <Link
+                  href="#contact"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-[#f7b731] bg-transparent px-6 text-sm font-medium text-[#f7b731] shadow-sm transition-colors hover:bg-[#f7b731]/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Contact Me
+                </Link>
+              </div>
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32" id="about">
-          <div className="container max-w-4xl px-4 md:px-6">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
-                <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#f0f4f8] dark:bg-[#1e293b]">
+          <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-6">
+            <div className="flex flex-col items-start justify-center space-y-6">
+              <h1 className="text-4xl font-bold tracking-tight text-[#1e293b] dark:text-white sm:text-5xl md:text-6xl">
+                Who Am I?
+              </h1>
+              <p className="max-w-[600px] text-lg text-[#475569] dark:text-[#94a3b8]">
                   I&apos;m a passionate web developer with a strong background in building modern, responsive, and user-friendly
                   web applications. With a keen eye for design and a deep understanding of the latest web technologies, I
                   strive to create elegant and efficient solutions that deliver exceptional user experiences.
-                </p>
-              </div>
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-xl">
+              <Image
+                src="/personal-pic.jpg"
+                width="600"
+                height="600"
+                alt="Gershom Gbadebo"
+                className="aspect-square w-full object-cover"
+              />
             </div>
           </div>
         </section>
@@ -86,7 +94,7 @@ export default function Home() {
           <div className="space-y-4 mb-8">
             <h2 className="text-3xl font-bold">Projects</h2>
             <p className="text-gray-500 dark:text-gray-400">
-              I&apos;ve worked on a variety of web projects, from a movie-management platform to custom websites. Here
+              I&apos;ve had the priviledge to work on a variety of web projects, from a movie-management platform to custom websites. Here
               are some of my best projects.
             </p>
           </div>
@@ -136,7 +144,7 @@ export default function Home() {
                   alt="Project 2"
                   className="w-full h-48 object-cover"
                   height="200"
-                  src="/placeholder.svg"
+                  src="/rccgdcgallowaynj.png"
                   style={{
                     aspectRatio: "300/200",
                     objectFit: "cover",
@@ -147,10 +155,10 @@ export default function Home() {
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2">
                   <Link className="hover:text-primary-500 transition-colors" href="#">
-                    Project 2
+                    Dominion Chapel's Website
                   </Link>
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 mb-4">A brief description of the second project.</p>
+                <p className="text-gray-500 dark:text-gray-400 mb-4">A simple and functional website built with HTML5, Bootstrap and PHP.</p>
                 <div className="flex items-center justify-between">
                   <Link
                     className="inline-flex items-center text-primary-500 hover:text-primary-600 transition-colors"
@@ -261,7 +269,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                href="#"
+                href="/resume.docx"
               >
                 <FileIcon className="mr-2 h-4 w-4" />
                 Check Out My Resume
@@ -313,21 +321,23 @@ export default function Home() {
                 <span className="text-lg font-semibold text-gray-200">About Me</span>
               </Link>
               <p className="text-sm leading-relaxed">
-                Gershom Gbadebo is a full-stack web developer with a passion for creating beautiful and functional websites.
+                I&apos;m a full-stack web developer with a passion for creating beautiful and functional websites.
               </p>
             </div>
             <div className="flex flex-col items-start">
               <h3 className="text-lg font-semibold text-gray-200 mb-4">Connect</h3>
               <div className="flex space-x-4">
-                <Link className="hover:text-gray-300" href="#">
+                <Link href="https://github.com/TMS345" className="hover:text-gray-300">
                   <GithubIcon className="h-5 w-5" />
+                  <a target="_blank" rel="noopener noreferrer">GitHub</a>
                 </Link>
-                <Link className="hover:text-gray-300" href="#">
+                <Link href="https://linkedin.com/in/gershom-gbadebo" className="hover:text-gray-300">
                   <LinkedinIcon className="h-5 w-5" />
+                  <a target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </Link>
-                <Link className="hover:text-gray-300" href="#">
+                {/* <Link className="hover:text-gray-300" href="#">
                   <MailIcon className="h-5 w-5" />
-                </Link>
+                </Link> */}
               </div>
             </div>
             <div className="flex flex-col items-start">
