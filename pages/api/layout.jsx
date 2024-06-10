@@ -3,19 +3,17 @@
 
 import { Judson } from 'next/font/google'
 import { Libre_Franklin } from 'next/font/google'
-// import './styles.css'
+import './styles.css'
 
 const judson = Judson({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-judson',
-  weight: ['400', '700']
 })
 const libre_franklin = Libre_Franklin({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-libre_franklin',
-  weight: ['400', '600', '800']
 })
 
 export default function Layout({ children }) {

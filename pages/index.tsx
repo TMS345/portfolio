@@ -9,24 +9,17 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { useState } from 'react';
 
 export default function Home() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-
-  const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
-
   return (
     <div className="w-full flex flex-col min-h-[100dvh]" id="home">
       <header className="fixed top-0 z-50 w-full bg-white shadow-sm dark:bg-gray-950 dark:text-gray-50">
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <Link className="flex items-center gap-2 font-bold" href="#">
             <Image src="/gershom's-logo.png" alt="Logo" width={75} height={75} className="rounded-xl group-hover:scale-110" />
-            {/* <span>Gershom Gbadebo</span> */}
+            <span>Gershom Gbadebo</span>
           </Link>
-          <nav className={`space-x-4 ${isNavOpen ? 'block' : 'hidden'} space-x-4 md:flex`}>
+          <nav className="hidden space-x-4 md:flex">
             <Link className="rounded-md px-3 py-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800" href="#home">
               Home
             </Link>
@@ -40,60 +33,52 @@ export default function Home() {
               Contact
             </Link>
           </nav>
-          <Button className="md:hidden" size="icon" variant="outline" onClick={toggleNav}>
+          <Button className="md:hidden" size="icon" variant="outline">
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle navigation</span>
           </Button>
         </div>
       </header>
-      <main className="w-full column">
-        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-[#4b6cb7] to-[#182848]">
-          <div className="container px-4 md:px-6 flex flex-col items-center justify-center gap-8">
-            <div className="space-y-4 text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Gershom Gbadebo</h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-200">Full-Stack Web Developer</h2>
-              <p className="max-w-md text-gray-300">
-                Crafting beautiful and functional websites that bridge you closer to your goals.
-              </p>
-              <div className="flex justify-center gap-4">
-                <Link
-                  href="#projects"
-                  className="inline-flex h-10 items-center justify-center rounded-md bg-[#f7b731] px-6 text-sm font-medium text-gray-900 shadow transition-colors hover:bg-[#f4a524] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  View Portfolio
-                </Link>
-                <Link
-                  href="#contact"
-                  className="inline-flex h-10 items-center justify-center rounded-md border border-[#f7b731] bg-transparent px-6 text-sm font-medium text-[#f7b731] shadow-sm transition-colors hover:bg-[#f7b731]/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50"
-                  prefetch={false}
-                >
-                  Contact Me
-                </Link>
-              </div>
+      <main className="w-full max-w-screen-lg column">
+        <section className="relative w-full h-[80vh] flex items-center justify-center bg-gray-900 overflow-hidden">
+          {/* <img
+            alt="Hero Background"
+            className="absolute inset-0 w-full h-full object-cover opacity-50"
+            src="/placeholder.svg"
+          /> */}
+          <div className="relative z-10 text-center space-y-6 px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Gershom Gbadebo</h1>
+            <p className="text-xl text-gray-300">Full-Stack Web Developer</p>
+            <p className="text-lg text-gray-400 max-w-3xl">
+              Crafting beautiful and functional websites that bring your ideas to life.
+            </p>
+            <div className="flex justify-center space-x-4">
+              <Link
+                className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                href="#projects"
+              >
+                View Work
+              </Link>
+              <Link
+                className="inline-flex items-center justify-center rounded-md border border-transparent bg-transparent px-4 py-2 text-base font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                href="#contact"
+              >
+                Contact Me
+              </Link>
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-[#f0f4f8] dark:bg-[#1e293b]">
-          <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-6">
-            <div className="flex flex-col items-start justify-center space-y-6">
-              <h1 className="text-4xl font-bold tracking-tight text-[#1e293b] dark:text-white sm:text-5xl md:text-6xl">
-                Who Am I?
-              </h1>
-              <p className="max-w-[600px] text-lg text-[#475569] dark:text-[#94a3b8]">
-                  I&apos;m a passionate web developer with a strong background in building modern, responsive, and user-friendly
+        <section className="w-full py-12 md:py-24 lg:py-32" id="about">
+          <div className="container max-w-4xl px-4 md:px-6">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
+                <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  I'm a passionate web developer with a strong background in building modern, responsive, and user-friendly
                   web applications. With a keen eye for design and a deep understanding of the latest web technologies, I
                   strive to create elegant and efficient solutions that deliver exceptional user experiences.
-              </p>
-            </div>
-            <div className="relative overflow-hidden rounded-xl">
-              <Image
-                src="/personal-pic.jpg"
-                width="600"
-                height="600"
-                alt="Gershom Gbadebo"
-                className="aspect-square w-full object-cover"
-              />
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -101,39 +86,43 @@ export default function Home() {
           <div className="space-y-4 mb-8">
             <h2 className="text-3xl font-bold">Projects</h2>
             <p className="text-gray-500 dark:text-gray-400">
-              I&apos;ve had the priviledge to work on a variety of web projects, from a movie-management platform to custom websites. Here
+              I've worked on a variety of web projects, from a movie-management platform to custom websites. Here
               are some of my best projects.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
               <Link className="block" href="#">
-                <Image
+                <img
                   alt="Project 1"
                   className="w-full h-48 object-cover"
-                  height="600"
-                  src="/cinemaworld.png"
-                  width="800"
+                  height="200"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "300/200",
+                    objectFit: "cover",
+                  }}
+                  width="300"
                 />
               </Link>
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2">
                   <Link className="hover:text-primary-500 transition-colors" href="#">
-                    CinemaWorld Platform
+                    Project 1
                   </Link>
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 mb-4">A dynamic movie-mangement platform built with React.js Node.js and MongoDB!</p>
+                <p className="text-gray-500 dark:text-gray-400 mb-4">A brief description of the first project.</p>
                 <div className="flex items-center justify-between">
-                  {/* <Link
+                  <Link
                     className="inline-flex items-center text-primary-500 hover:text-primary-600 transition-colors"
                     href="#"
                   >
                     <LinkIcon className="mr-1 w-4 h-4" />
                     Live Demo
-                  </Link> */}
+                  </Link>
                   <Link
                     className="inline-flex items-center text-primary-500 hover:text-primary-600 transition-colors"
-                    target="_blank"  rel="noopener noreferrer" href="https://github.com/TMS345/CinemaWorld"
+                    href="#"
                   >
                     <GithubIcon className="mr-1 w-4 h-4" />
                     Code
@@ -143,32 +132,36 @@ export default function Home() {
             </div>
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
               <Link className="block" href="#">
-                <Image
+                <img
                   alt="Project 2"
                   className="w-full h-48 object-cover"
-                  height="600"
-                  src="/rccgdcgallowaynj.png"
-                  width="800"
+                  height="200"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "300/200",
+                    objectFit: "cover",
+                  }}
+                  width="300"
                 />
               </Link>
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2">
                   <Link className="hover:text-primary-500 transition-colors" href="#">
-                    Dominion Chapel&apos;s Website
+                    Project 2
                   </Link>
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 mb-4">A simple and functional website built with HTML5, CSS3, Bootstrap and PHP!</p>
+                <p className="text-gray-500 dark:text-gray-400 mb-4">A brief description of the second project.</p>
                 <div className="flex items-center justify-between">
                   <Link
                     className="inline-flex items-center text-primary-500 hover:text-primary-600 transition-colors"
-                    target="_blank"  rel="noopener noreferrer" href="https://rccgdominionchapelnj.org"
+                    href="#"
                   >
                     <LinkIcon className="mr-1 w-4 h-4" />
                     Live Demo
                   </Link>
                   <Link
                     className="inline-flex items-center text-primary-500 hover:text-primary-600 transition-colors"
-                    target="_blank" rel="noopener noreferrer" href="https://github.com/TMS345/rccgdominionchapelnj-website"
+                    href="#"
                   >
                     <GithubIcon className="mr-1 w-4 h-4" />
                     Code
@@ -178,23 +171,27 @@ export default function Home() {
             </div>
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
               <Link className="block" href="#">
-                <Image
+                <img
                   alt="Project 3"
                   className="w-full h-48 object-cover"
-                  height="600"
-                  src="/stu-website.png"
-                  width="800"
+                  height="200"
+                  src="/placeholder.svg"
+                  style={{
+                    aspectRatio: "300/200",
+                    objectFit: "cover",
+                  }}
+                  width="300"
                 />
               </Link>
               <div className="p-4">
                 <h3 className="text-lg font-bold mb-2">
                   <Link className="hover:text-primary-500 transition-colors" href="#">
-                    Shalom Theological University&apos;s Website
+                    Project 3
                   </Link>
                 </h3>
-                <p className="text-gray-500 dark:text-gray-400 mb-4">A fast and effective university landing page built and customized with WordPress and PHP!</p>
+                <p className="text-gray-500 dark:text-gray-400 mb-4">A brief description of the third project.</p>
                 <div className="flex items-center justify-between">
-                  {/* <Link
+                  <Link
                     className="inline-flex items-center text-primary-500 hover:text-primary-600 transition-colors"
                     href="#"
                   >
@@ -207,13 +204,13 @@ export default function Home() {
                   >
                     <GithubIcon className="mr-1 w-4 h-4" />
                     Code
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
             </div>
-            {/* <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
+            <div className="bg-white dark:bg-gray-950 rounded-lg shadow-lg overflow-hidden">
               <Link className="block" href="#">
-                <Image
+                <img
                   alt="Project 4"
                   className="w-full h-48 object-cover"
                   height="200"
@@ -249,7 +246,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
@@ -264,7 +261,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 min-[400px]:flex-row lg:justify-end">
               <Link
                 className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-                href="/resume.docx"
+                href="#"
               >
                 <FileIcon className="mr-2 h-4 w-4" />
                 Check Out My Resume
@@ -272,6 +269,92 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* <section className="py-12 md:py-16 lg:py-20">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-12 lg:grid-cols-3">
+              <div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Skills</h2>
+                <p className="mt-4 text-gray-500 dark:text-gray-400">Technologies and tools I'm proficient in.</p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                  <div className="flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <HashIcon className="w-10 h-10" />
+                    <div className="text-sm font-medium">HTML</div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <RssIcon className="w-10 h-10" />
+                    <div className="text-sm font-medium">CSS</div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <ChromeIcon className="w-10 h-10" />
+                    <div className="text-sm font-medium">JavaScript</div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <RedoDotIcon className="w-10 h-10" />
+                    <div className="text-sm font-medium">React</div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <LeafIcon className="w-10 h-10" />
+                    <div className="text-sm font-medium">Node.js</div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <WindIcon className="w-10 h-10" />
+                    <div className="text-sm font-medium">Tailwind CSS</div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <GitGraphIcon className="w-10 h-10" />
+                    <div className="text-sm font-medium">Git</div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-gray-100 dark:bg-gray-800">
+                    <CodeIcon className="w-10 h-10" />
+                    <div className="text-sm font-medium">Python</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Experience</h2>
+                <p className="mt-4 text-gray-500 dark:text-gray-400">Past projects and roles I've held.</p>
+                <div className="mt-8 space-y-8">
+                  <div>
+                    <h3 className="text-lg font-bold">Senior Frontend Developer</h3>
+                    <p className="mt-1 text-gray-500 dark:text-gray-400">Acme Inc. | 2020 - Present</p>
+                    <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                      Responsible for building and maintaining the company's web application using React, TypeScript, and
+                      Tailwind CSS. Collaborated with the design team to implement pixel-perfect UI and UX. Mentored junior
+                      developers and contributed to architectural decisions.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold">Freelance Web Developer</h3>
+                    <p className="mt-1 text-gray-500 dark:text-gray-400">2018 - 2020</p>
+                    <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                      Worked with various clients to build custom websites and web applications. Utilized a range of
+                      technologies, including Node.js, Express, MongoDB, and React. Responsible for project management,
+                      client communication, and delivering high-quality solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Education</h2>
+                <p className="mt-4 text-gray-500 dark:text-gray-400">Relevant degrees, certifications, and courses.</p>
+                <div className="mt-8 space-y-8">
+                  <div>
+                    <h3 className="text-lg font-bold">Bachelor of Science in Computer Science</h3>
+                    <p className="mt-1 text-gray-500 dark:text-gray-400">University of Example | 2014 - 2018</p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold">Certified Scrum Master</h3>
+                    <p className="mt-1 text-gray-500 dark:text-gray-400">Scrum Alliance | 2019</p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold">Udemy Course: The Complete Web Developer in 2023: Zero to Mastery</h3>
+                    <p className="mt-1 text-gray-500 dark:text-gray-400">Udemy | 2022</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="contact">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -281,7 +364,7 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Contact Me</h2>
                 <p className="max-w-screen-lg text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  I&apos;m always excited to connect with new people and build potential projects. Feel free to reach out
+                  I'm always excited to connect with new people and build potential projects. Feel free to reach out
                   using the form below.
                 </p>
               </div>
@@ -316,23 +399,21 @@ export default function Home() {
                 <span className="text-lg font-semibold text-gray-200">About Me</span>
               </Link>
               <p className="text-sm leading-relaxed">
-                I&apos;m a full-stack web developer with a passion for creating beautiful and functional websites.
+                Gershom Gbadebo is a full-stack web developer with a passion for creating beautiful and functional websites.
               </p>
             </div>
             <div className="flex flex-col items-start">
               <h3 className="text-lg font-semibold text-gray-200 mb-4">Connect</h3>
               <div className="flex space-x-4">
-                <Link target="_blank"  rel="noopener noreferrer" href="https://github.com/TMS345" className="hover:text-gray-300">
+                <Link className="hover:text-gray-300" href="#">
                   <GithubIcon className="h-5 w-5" />
-                  {/* <a>GitHub</a> */}
                 </Link>
-                <Link target="_blank"  rel="noopener noreferrer" href="https://linkedin.com/in/gershom-gbadebo" className="hover:text-gray-300">
+                <Link className="hover:text-gray-300" href="#">
                   <LinkedinIcon className="h-5 w-5" />
-                  {/* <a>LinkedIn</a> */}
                 </Link>
-                {/* <Link className="hover:text-gray-300" href="#">
+                <Link className="hover:text-gray-300" href="#">
                   <MailIcon className="h-5 w-5" />
-                </Link> */}
+                </Link>
               </div>
             </div>
             <div className="flex flex-col items-start">
