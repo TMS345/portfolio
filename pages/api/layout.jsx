@@ -3,12 +3,12 @@
 
 import { Judson } from 'next/font/google'
 import { Libre_Franklin } from 'next/font/google'
-import './styles.css'
 
 const judson = Judson({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-judson',
+  weight: ['400', '700']
 })
 const libre_franklin = Libre_Franklin({
   subsets: ['latin'],
