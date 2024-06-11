@@ -124,13 +124,13 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400 mb-4">A dynamic movie-mangement platform built with React.js Node.js and MongoDB!</p>
                 <div className="flex items-center justify-between">
-                  {/* <Link
+                  <Link
                     className="inline-flex items-center text-primary-500 hover:text-primary-600 transition-colors"
-                    href="#"
+                    target="_blank"  rel="noopener noreferrer" href="https://cinemaworld-i4io7fesf-tms345s-projects.vercel.app/"
                   >
                     <LinkIcon className="mr-1 w-4 h-4" />
                     Live Demo
-                  </Link> */}
+                  </Link>
                   <Link
                     className="inline-flex items-center text-primary-500 hover:text-primary-600 transition-colors"
                     target="_blank"  rel="noopener noreferrer" href="https://github.com/TMS345/CinemaWorld"
